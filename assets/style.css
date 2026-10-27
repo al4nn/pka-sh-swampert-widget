@@ -22,8 +22,11 @@ body { padding-top: 40px; }
 h1 { font-size: 44px; line-height: 1.15; letter-spacing: 1px; margin: 12px 0 17px; font-weight: 850; text-shadow: 0 3px 15px #00191a66; }
 h1 span { color: #c8edaa; font-weight: 350; }
 .tags { display: flex; align-items: center; gap: 8px; }
-.tags > span:not(.hunt-label) { padding: 4px 10px; border: 1px solid; border-radius: 4px; font-size: 9px; font-weight: 700; letter-spacing: 1.8px; }
-.water { color: #a4dfeb; background: #60c4d51a; border-color: #60c4d53b !important; }.ground { color: #e8c397; background: #b9945e1a; border-color: #b9945e4a !important; }
+.tags > span:not(.hunt-label) { display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 5px 12px 5px 6px; border: 1px solid; border-radius: 5px; font-size: 9px; font-weight: 800; letter-spacing: 1.3px; }
+.tags img { display: block; width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+.water { background: #60c4d51a; border-color: #60c4d53b !important; }
+.ground { background: #b9945e1a; border-color: #b9945e4a !important; }
+.tags > span > span { position: relative; color: #fff; text-shadow: 0 1px 3px #000b; }
 .hunt-label { margin-left: 9px; font-size: 12px; color: #c0d4c3a6; }
 .counter { position: absolute; right: 65px; top: 38px; width: 482px; padding: 0 0 0 35px; border-left: 1px solid #b7eac526; }
 .counter-heading { display: flex; justify-content: space-between; align-items: center; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #b5cfc4; }

@@ -1,36 +1,85 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shiny Swampert • Brokes</title>
-  <link rel="stylesheet" href="./assets/style.css">
-</head>
-<body>
-  <main class="widget" aria-label="Contador de brokes do Shiny Swampert">
-    <div class="landscape" aria-hidden="true"></div>
-    <img class="logo" src="./assets/images/logo.png" alt="PKA">
-    <div class="scene" aria-hidden="true">
-      <div class="halo"></div>
-      <div class="ripple ripple-one"></div>
-      <div class="ripple ripple-two"></div>
-      <img class="pokemon" src="./assets/images/swampert.png" alt="">
-      <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span>
-    </div>
-    <section class="identity">
-      <div class="eyebrow"><span class="live-dot"></span> SHINY HUNT <span class="dex">#0260</span></div>
-      <h1><span>SHINY</span> SWAMPERT</h1>
-      <div class="tags"><span class="water">ÁGUA</span><span class="ground">TERRA</span><span class="hunt-label">Uma tentativa mais perto.</span></div>
-    </section>
-    <section class="counter" aria-label="Progresso de brokes">
-      <div class="counter-heading"><label for="brokes">CONTADOR DE BROKES</label><span id="percentage">11,19%</span></div>
-      <div class="numbers"><input id="brokes" type="text" inputmode="numeric" autocomplete="off" spellcheck="false" value="1.052" aria-label="Brokes atuais, clique para editar"><span class="divider">/</span><span class="maximum">9.400</span></div>
-      <div class="progress" role="progressbar" aria-label="Brokes em relação à máxima" aria-valuemin="0" aria-valuemax="9400" aria-valuenow="1052"><div id="progress-fill"></div></div>
-      <div class="counter-footer"><span>MÁXIMA <strong>9.400</strong></span><span>FALTAM <strong id="remaining">8.348</strong></span></div>
-      <div class="controls" aria-label="Ajustar contador"><button id="decrease" type="button" aria-label="Diminuir um broke">−1</button><span>clique no número para editar</span><button id="increase" type="button" aria-label="Adicionar um broke">+1</button></div>
-    </section>
-    <div class="bottom-line" aria-hidden="true"></div>
-  </main>
-  <script src="./assets/main.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shiny Swampert • Brokes</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <main class="widget" aria-label="Contador de brokes do Shiny Swampert">
+      <div class="landscape" aria-hidden="true"></div>
+      <img class="logo" src="./assets/images/logo.png" alt="PKA" />
+      <div class="scene" aria-hidden="true">
+        <div class="halo"></div>
+        <div class="ripple ripple-one"></div>
+        <div class="ripple ripple-two"></div>
+        <img class="pokemon" src="./assets/images/swampert.png" alt="" />
+        <span class="sparkle s1">✦</span><span class="sparkle s2">✧</span
+        ><span class="sparkle s3">✦</span>
+      </div>
+      <section class="identity">
+        <!-- <div class="eyebrow"><span class="live-dot"></span> SHINY HUNT <span class="dex">#260</span></div> -->
+        <h1><span>SHINY</span> SWAMPERT</h1>
+        <div class="tags">
+          <span class="water"
+            ><img
+              src="./assets/images/water.png"
+              alt=""
+              width="24"
+              height="24"
+            /><span>ÁGUA</span></span
+          ><span class="ground"
+            ><img
+              src="./assets/images/ground.png"
+              alt=""
+              width="24"
+              height="24"
+            /><span>TERRA</span></span
+          ><span class="hunt-label">Uma tentativa mais perto.</span>
+        </div>
+      </section>
+      <section class="counter" aria-label="Progresso de brokes">
+        <div class="counter-heading">
+          <label for="brokes">CONTADOR DE BROKES</label
+          ><span id="percentage">11,19%</span>
+        </div>
+        <div class="numbers">
+          <input
+            id="brokes"
+            type="text"
+            inputmode="numeric"
+            autocomplete="off"
+            spellcheck="false"
+            value="1.052"
+            aria-label="Brokes atuais, clique para editar"
+          /><span class="divider">/</span><span class="maximum">9.400</span>
+        </div>
+        <div
+          class="progress"
+          role="progressbar"
+          aria-label="Brokes em relação à máxima"
+          aria-valuemin="0"
+          aria-valuemax="9400"
+          aria-valuenow="1052"
+        >
+          <div id="progress-fill"></div>
+        </div>
+        <div class="counter-footer">
+          <span>MÁXIMA <strong>9.400</strong></span
+          ><span>FALTAM <strong id="remaining">8.348</strong></span>
+        </div>
+        <div class="controls" aria-label="Ajustar contador">
+          <button id="decrease" type="button" aria-label="Diminuir um broke">
+            −1</button
+          ><span>clique no número para editar</span
+          ><button id="increase" type="button" aria-label="Adicionar um broke">
+            +1
+          </button>
+        </div>
+      </section>
+      <div class="bottom-line" aria-hidden="true"></div>
+    </main>
+    <script src="./assets/main.js"></script>
+  </body>
 </html>

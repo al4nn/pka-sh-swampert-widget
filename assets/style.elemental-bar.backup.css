@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+:root { color-scheme: dark; font-family: "Segoe UI", Arial, sans-serif; }
+html, body { margin: 0; padding: 0; background: transparent; width: 1735px; overflow: hidden; }
+body { padding-top: 40px; }
+.widget { width: 1735px; height: 240px; position: relative; isolation: isolate; color: #effff5; background: #092c2b; }
+.landscape { position: absolute; inset: 0; z-index: -2; background: url('./images/lagoon.svg') center / cover no-repeat; overflow: hidden; }
+.widget::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, transparent 18%, #07252633 34%, #061d21b8 58%, #061a20ed 100%); }
+.widget::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-top: 1px solid #c0f6cc44; border-bottom: 1px solid #a5f8ce44; box-shadow: inset 0 0 65px #001a2540; }
+.logo { position: absolute; top: -45px; left: 25px; width: 75px; height: 75px; z-index: 5; filter: drop-shadow(0 3px 8px #0009); }
+.scene { position: absolute; left: 112px; top: 0; width: 365px; height: 240px; }
+.halo { position: absolute; width: 320px; height: 230px; left: 15px; top: 0; background: radial-gradient(ellipse, #c4ffac33, #5be8c411 45%, transparent 70%); }
+.pokemon { position: absolute; width: 263px; height: 263px; object-fit: contain; left: 46px; top: -27px; filter: drop-shadow(0 9px 5px #001a1bc0) drop-shadow(0 0 18px #b5ffac30); }
+.ripple { position: absolute; border: 1px solid #bcffd778; border-radius: 50%; background: radial-gradient(ellipse, #95d2b42a, transparent 70%); transform: rotate(-3deg); }
+.ripple-one { width: 307px; height: 33px; bottom: 12px; left: 20px; }
+.ripple-two { width: 350px; height: 48px; bottom: 5px; left: 0; opacity: .42; }
+.sparkle { position: absolute; color: #e6ffc4; text-shadow: 0 0 15px #b2ffc8; animation: glimmer 4s ease-in-out infinite; }
+.s1 { left: 53px; top: 51px; font-size: 27px; }.s2 { right: 25px; top: 28px; font-size: 37px; animation-delay: -1.4s; }.s3 { right: 31px; bottom: 66px; font-size: 19px; animation-delay: -2.8s; }
+.identity { position: absolute; left: 494px; top: 57px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #b5d4bf; }
+.live-dot { width: 6px; height: 6px; border-radius: 50%; background: #c4ec94; box-shadow: 0 0 9px #bbff9c80; }
+.dex { margin-left: 12px; color: #b5d4bf80; font-size: 11px; letter-spacing: 2px; }
+h1 { font-size: 44px; line-height: 1.15; letter-spacing: 1px; margin: 12px 0 17px; font-weight: 850; text-shadow: 0 3px 15px #00191a66; }
+h1 span { color: #c8edaa; font-weight: 350; }
+.tags { display: flex; align-items: center; gap: 8px; }
+.tags > span:not(.hunt-label) { position: relative; display: inline-flex; align-items: center; width: 105px; height: 36px; padding-left: 45px; font-size: 9px; font-weight: 800; letter-spacing: 1.3px; }
+.tags img { position: absolute; inset: 0; display: block; width: 105px; height: 36px; object-fit: contain; }
+.tags > span > span { position: relative; color: #fff; text-shadow: 0 1px 3px #000b; }
+.hunt-label { margin-left: 9px; font-size: 12px; color: #c0d4c3a6; }
+.counter { position: absolute; right: 65px; top: 38px; width: 482px; padding: 0 0 0 35px; border-left: 1px solid #b7eac526; }
+.counter-heading { display: flex; justify-content: space-between; align-items: center; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #b5cfc4; }
+#percentage { color: #d6f5b5; font-size: 12px; letter-spacing: 1px; }
+.numbers { display: flex; align-items: baseline; gap: 16px; margin: 3px 0 10px; font-variant-numeric: tabular-nums; }
+#brokes { font: 750 64px/1.1 "Segoe UI", Arial, sans-serif; letter-spacing: -2px; width: 190px; padding: 0; margin: 0; color: #edffe1; background: transparent; border: 0; border-bottom: 1px solid transparent; border-radius: 0; outline: none; text-shadow: 0 0 25px #bded9f20; }
+#brokes:hover, #brokes:focus { border-bottom-color: #c4ef9c88; }
+.divider { font-size: 29px; font-weight: 200; color: #8aa99c66; }.maximum { font-size: 32px; color: #a9bfb1; font-weight: 350; letter-spacing: 1px; }
+.progress { width: 100%; height: 6px; border-radius: 6px; background: #b5edc413; overflow: hidden; }
+#progress-fill { width: 11.191489%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #58bfaa, #c9efa5); box-shadow: 0 0 12px #c9efa544; transition: width .3s ease; }
+.counter-footer { display: flex; justify-content: space-between; margin-top: 12px; font-size: 9px; letter-spacing: 1.6px; color: #91aca0; }.counter-footer strong { margin-left: 5px; font-size: 10px; font-weight: 600; color: #c2d4c7; font-variant-numeric: tabular-nums; }
+.controls { position: absolute; top: 160px; left: 35px; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; opacity: 0; transition: opacity .2s; }
+.counter:hover .controls, .counter:focus-within .controls { opacity: 1; }.controls span { font-size: 10px; color: #b0c9bc; }.controls button { cursor: pointer; border: 1px solid #bee6b84d; border-radius: 5px; padding: 3px 14px; background: #0c302d; color: #e1f7d1; font: 600 12px "Segoe UI", sans-serif; }.controls button:hover { background: #285043; }.controls button:focus-visible { outline: 2px solid #d6f5b5; }
+.bottom-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #94c88b77 25%, #cce5a480 55%, transparent); }
+@keyframes glimmer { 0%,100% { opacity: .35; } 50% { opacity: .95; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
