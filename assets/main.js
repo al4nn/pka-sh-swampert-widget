@@ -1,8 +1,8 @@
 (() => {
   'use strict';
-  const INITIAL = 1052;
+  const INITIAL = 14;
   const MAXIMUM = 9400;
-  const KEY = 'pka-shiny-swampert-brokes-v1';
+  const KEY = 'pka-shiny-swampert-project-2-brokes-v1';
   const input = document.querySelector('#brokes');
   const progress = document.querySelector('.progress');
   const formatter = new Intl.NumberFormat('pt-BR');

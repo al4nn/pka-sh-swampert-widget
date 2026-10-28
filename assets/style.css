@@ -28,6 +28,11 @@ h1 span { color: #c8edaa; font-weight: 350; }
 .ground { background: #b9945e1a; border-color: #b9945e4a !important; }
 .tags > span > span { position: relative; color: #fff; text-shadow: 0 1px 3px #000b; }
 .hunt-label { margin-left: 9px; font-size: 12px; color: #c0d4c3a6; }
+.capture-record { position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center; gap: 10px; width: fit-content; margin-top: 16px; padding: 7px 11px; border: 1px solid #dbcd8b88; border-radius: 5px; background: linear-gradient(110deg, #152d25ed, #49452acc, #152d25ed); color: #d4d7b5; font-size: 9px; font-weight: 600; letter-spacing: 1px; animation: captureGlow 3.6s ease-in-out infinite; }
+.capture-record::before { content: ""; position: absolute; z-index: -1; pointer-events: none; top: -50%; bottom: -50%; left: -45%; width: 35%; background: linear-gradient(90deg, transparent, #ffeab74d, transparent); transform: translateX(0) skewX(-22deg); animation: captureShine 5.5s ease-in-out infinite; }
+.capture-star { display: inline-block; color: #f2d58d; font-size: 16px; line-height: 1; animation: captureStar 3.6s ease-in-out infinite; }
+.capture-record strong { color: #f6e3ac; font-size: 12px; letter-spacing: .3px; font-variant-numeric: tabular-nums; }
+.capture-record time { border-left: 1px solid #dbcd8b33; padding-left: 10px; color: #b1bdad; font-size: 10px; letter-spacing: .4px; }
 .counter { position: absolute; right: 65px; top: 38px; width: 482px; padding: 0 0 0 35px; border-left: 1px solid #b7eac526; }
 .counter-heading { display: flex; justify-content: space-between; align-items: center; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #b5cfc4; }
 #percentage { color: #d6f5b5; font-size: 12px; letter-spacing: 1px; }
@@ -36,10 +41,13 @@ h1 span { color: #c8edaa; font-weight: 350; }
 #brokes:hover, #brokes:focus { border-bottom-color: #c4ef9c88; }
 .divider { font-size: 29px; font-weight: 200; color: #8aa99c66; }.maximum { font-size: 32px; color: #a9bfb1; font-weight: 350; letter-spacing: 1px; }
 .progress { width: 100%; height: 6px; border-radius: 6px; background: #b5edc413; overflow: hidden; }
-#progress-fill { width: 11.191489%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #58bfaa, #c9efa5); box-shadow: 0 0 12px #c9efa544; transition: width .3s ease; }
+#progress-fill { width: 0.148936%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #58bfaa, #c9efa5); box-shadow: 0 0 12px #c9efa544; transition: width .3s ease; }
 .counter-footer { display: flex; justify-content: space-between; margin-top: 12px; font-size: 9px; letter-spacing: 1.6px; color: #91aca0; }.counter-footer strong { margin-left: 5px; font-size: 10px; font-weight: 600; color: #c2d4c7; font-variant-numeric: tabular-nums; }
 .controls { position: absolute; top: 160px; left: 35px; right: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; opacity: 0; transition: opacity .2s; }
 .counter:hover .controls, .counter:focus-within .controls { opacity: 1; }.controls span { font-size: 10px; color: #b0c9bc; }.controls button { cursor: pointer; border: 1px solid #bee6b84d; border-radius: 5px; padding: 3px 14px; background: #0c302d; color: #e1f7d1; font: 600 12px "Segoe UI", sans-serif; }.controls button:hover { background: #285043; }.controls button:focus-visible { outline: 2px solid #d6f5b5; }
 .bottom-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #94c88b77 25%, #cce5a480 55%, transparent); }
 @keyframes glimmer { 0%,100% { opacity: .35; } 50% { opacity: .95; } }
+@keyframes captureGlow { 0%,100% { border-color: #dbcd8b66; box-shadow: 0 0 5px #f2d58d12, inset 0 0 8px #f2d58d05; } 50% { border-color: #f5db99cc; box-shadow: 0 0 16px #f2d58d40, inset 0 0 12px #f2d58d12; } }
+@keyframes captureShine { 0%,20% { transform: translateX(0) skewX(-22deg); opacity: 0; } 25% { opacity: 1; } 60% { transform: translateX(440%) skewX(-22deg); opacity: 0; } 100% { transform: translateX(440%) skewX(-22deg); opacity: 0; } }
+@keyframes captureStar { 0%,100% { transform: scale(1); text-shadow: 0 0 3px #f2d58d44; } 50% { transform: scale(1.2); text-shadow: 0 0 10px #ffe1a0bb; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
